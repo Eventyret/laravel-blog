@@ -14,8 +14,10 @@ class PostsController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderBy('title', 'desc')->get();
+        // $posts = Post::all();
         // return $post = Post::where('title', 'Post 2')->get();
+        // DB Style $posts = DB::select('Select * FROM posts');
+        $posts = Post::orderBy('title', 'desc')->get();
         return view('posts.index')->with('posts', $posts);
     }
 
@@ -49,6 +51,7 @@ class PostsController extends Controller
     public function show($id)
     {
         $post = Post::find($id);
+        
         return view('posts.show')->with('post', $post);
     }
 
