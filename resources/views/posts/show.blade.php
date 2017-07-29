@@ -8,5 +8,5 @@
     </div>
     <hr>
     <small>Written on {{$post->created_at}}</small><br>
-    <a href="/posts" class="btn btn-default">Go Back</a>
+    <a href="/posts" class="btn btn-default">Go Back</a> | <a href="/posts/{{$post->id}}/edit" class="btn btn-success">Edit</a>
 @endsection
